@@ -5,15 +5,16 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Routes from './routes/Routes';
 import { GlobalStyles } from './styles/GlobalStyles';
+import { TodoListProvider } from './context/TodoListContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-
     <BrowserRouter>
-      <Routes/>
+      <TodoListProvider>
+        <Routes/>
+      </TodoListProvider> 
     </BrowserRouter>
-  
     <GlobalStyles/>
   </>
 );

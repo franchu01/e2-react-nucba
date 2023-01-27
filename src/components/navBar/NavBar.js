@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 const NavBarStyled = styled.div`
@@ -33,15 +34,19 @@ const LogoStyled = styled.button`
     height: 35px;
     width: 35px;
     border-radius: 100%;
+    cursor: pointer;
 
 `
 
 const NavBar = () => {
+
+    const navigate = useNavigate()
+
   return (
     <NavBarStyled>
-        <LogoStyled>FC</LogoStyled>
+        <LogoStyled onClick={ () => {  navigate('/') } }  >FC</LogoStyled>
         <ButtonsContainer>
-            <ButtonStyled> TODO LIST </ButtonStyled>
+            <ButtonStyled onClick={ () => {  navigate('todo-list') } } > TODO LIST </ButtonStyled>
             <ButtonStyled> POKE SEARCH </ButtonStyled>
         </ButtonsContainer>
     </NavBarStyled>
