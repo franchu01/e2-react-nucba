@@ -47,7 +47,7 @@ const NavBar = () => {
         <LogoStyled onClick={ () => {  navigate('/') } }  >FC</LogoStyled>
         <ButtonsContainer>
             <ButtonStyled onClick={ () => {  navigate('todo-list') } } > TODO LIST </ButtonStyled>
-            <ButtonStyled> POKE SEARCH </ButtonStyled>
+            <ButtonStyled onClick={ () => {  navigate('pokeapi-search') } }  > POKE SEARCH </ButtonStyled>
         </ButtonsContainer>
     </NavBarStyled>
   )

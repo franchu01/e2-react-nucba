@@ -3,6 +3,7 @@ import Home from '../components/home/Home'
 import { Route, Routes as ReactDomRoutes } from 'react-router-dom'
 import Layout from '../components/layout/Layout'
 import TodoList from '../components/todolist/TodoList'
+import PokeSearch from '../components/pokeSearch/PokeSearch'
 
 const Routes = () => {
 
@@ -11,7 +12,7 @@ const Routes = () => {
         <ReactDomRoutes>
             <Route  path="/" element={ <Home/> }  />
              <Route  path="todo-list" element={ <TodoList/> }  /> 
-            {/* <Route  path="pokeapi-search" element={ <PokeApi/> }  /> */}
+            <Route  path="pokeapi-search" element={ <PokeSearch/> }  />
         </ReactDomRoutes>
     </Layout>
   )
